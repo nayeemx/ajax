@@ -16,6 +16,7 @@
                 <th>Unit Price</th>
                 <th>Qty</th>
                 <th>Total Price</th>
+                <th>Image</th>
                 <th>Update</th>
                 <th>Delete</th>
             </tr>
@@ -43,6 +44,7 @@
                             <td>${item['UnitPrice']}</td>
                             <td>${item['Qty']}</td>
                             <td>${item['TotalPrice']}</td>
+                            <td>${item['Img']}</td>
                             <td><button onclick="deleteItem('${item['_id']}')">Delete</button></td>
                             <td><button onClick="updateItem('${item['_id']}')">Update</button></td>
                         </tr>

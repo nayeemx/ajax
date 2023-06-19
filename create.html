@@ -49,10 +49,9 @@
                 "TotalPrice":totalPrice,
                 "UnitPrice":unitPrice
             }
-            let res=await axios.post(`http://crud.teamrabbil.com/api/v1/CreateProduct/`,createOBJ)
+            let res=await axios.post(`https://crud.teamrabbil.com/api/v1/CreateProduct/`,createOBJ)
 
             if(res.status===200){
-                alert('Created');
                 window.location.href='index.html';
             }
             else {

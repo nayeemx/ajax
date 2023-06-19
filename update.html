@@ -58,6 +58,8 @@
             }
         }
         async function updateItem(){
+            const queryString = new URLSearchParams(window.location.search);
+            const id = queryString.get('id');
             let productID= document.getElementById('productID').value;
             let productName= document.getElementById('productName').value;
             let ProductCode= document.getElementById('productCode').value;
@@ -73,7 +75,7 @@
                 "TotalPrice":totalPrice,
                 "UnitPrice":unitPrice
             }
-            let res=await axios.post(`http://crud.teamrabbil.com/api/v1/UpdateProduct/${productID}`,UpdateOBJ)
+            let res=await axios.post(`https://crud.teamrabbil.com/api/v1/UpdateProduct/${id}`,UpdateOBJ)
 
             if(res.status===200){
                 window.location.href='index.html';
